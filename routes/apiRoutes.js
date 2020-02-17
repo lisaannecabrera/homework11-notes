@@ -6,7 +6,7 @@ const path = require("path");
 
 module.exports = app => {
   app.get("/api/notes", (req, res) => {
-      return res.json(array);
+    return res.json(array);
   });
   app.post("/api/notes", (req, res) => {
     array.push(req.body);
