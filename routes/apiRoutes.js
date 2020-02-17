@@ -19,7 +19,6 @@ module.exports = app => {
         if (err) throw err;
       }
     );
-    return res.json(true);
 
     app.delete("/api/notes/:id", (req, res) => {
       const id = req.params.id;
@@ -33,7 +32,7 @@ module.exports = app => {
       for (let i in array) {
         array[i].id = i;
       }
-      fs.writeFile(
+      s.writeFile(
         path.join(__dirname, "../db/db.json"),
         JSON.stringify(array),
         err => {
